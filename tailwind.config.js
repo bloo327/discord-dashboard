@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: '#202225',
         secondary: '#5865f2',
+        tint: 'rgba(0, 0, 0, 0.54)',
         gray: {
           900: '#202225',
           800: '#2f3136',
