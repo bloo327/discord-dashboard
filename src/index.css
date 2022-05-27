@@ -9,17 +9,64 @@
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
             bg-gray-700 text-green-500 hover:bg-green-600 
             hover:text-white rounded-3xl hover:rounded-xl
-            transition-all duration-200 ease-linear z-0; 
+            transition-all duration-200 ease-linear; 
   }
 
   .sidebar-name {
-    @apply absolute w-auto p-2 m-2 min-w-max left-16 
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 z-10
             rounded-md shadow-md text-white bg-gray-900 text-xs
             font-bold transition-all duration-100 scale-0 origin-left;
   }
 
   .sidebar-hr{
     @apply bg-gray-600 border-gray-700 mx-5 w-10;
+  }
+
+  .channelbar {
+    @apply bg-gray-800 h-screen w-60 ml-20 shadow-lg fixed -z-10;
+  }
+
+  .contentcontainer {
+    @apply mt-16 bg-gray-700 h-screen w-screen shadow-lg fixed ml-80 -z-20 p-8;
+  }
+
+  .navwrapper {
+    @apply fixed flex w-screen px-5 items-center h-16 ml-80 bg-gray-700 shadow-lg border-red-900;
+  }
+
+  .server-wrap {
+    @apply shadow-lg h-16
+  }
+
+  .drop-header {
+    @apply flex flex-row items-center justify-evenly
+    mx-0 text-gray-500 
+    cursor-pointer;
+  }
+
+  .drop-header-text {
+    @apply text-gray-500  text-opacity-90 
+    text-base font-semibold
+    cursor-default select-none;
+  }
+
+  .drop-header-selected {
+    @apply text-secondary text-opacity-90 text-base font-bold select-none;
+  }
+
+  .drop-selection {
+    @apply flex flex-row items-center
+    mt-1 mr-auto ml-2
+    transition duration-300 ease-in-out
+    cursor-pointer;
+  }
+
+  .drop-selection-text {
+    @apply text-gray-500 font-semibold tracking-wide
+    mr-auto 
+    transition duration-300 ease-in-out 
+    hover:text-white dark:hover:text-gray-500
+    cursor-pointer select-none;
   }
 
 }

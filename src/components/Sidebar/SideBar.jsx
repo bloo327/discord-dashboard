@@ -41,18 +41,18 @@ const SideBarIcon = ({ icon }) => {
                     <Transition.Child enter="transition-opacity ease-linear duration-300"
                     enterFrom="opacity-0"
                     enterTo="opacity-100"
-                    leave="transition-opacity ease-linear duration-300"
+                    leave="transition-opacity ease-linear duration-250"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0" >
                         <div className='overlay fixed top-0 left-0 w-full h-full bg-tint'/>
                     </Transition.Child>
                     <Transition.Child
-                    enter="transition ease-in-out duration-300 transform"
-                    enterFrom="-translate-y-2"
-                    enterTo="translate-y-0"
-                    leave="transition ease-in-out duration-150 transform"
-                    leaveFrom="translate-y-2"
-                    leaveTo="-translate-y-1"
+                    enter="transition ease-in duration-300 transform"
+                    enterFrom="-translate-y-2 opacity-50"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition ease-in duration-275 transform"
+                    leaveFrom="translate-y-0 opacity-100"
+                    leaveTo="-translate-y-3 opacity-0"
                     className='relative h-3/5 w-1/4 bg-white shadow-lg rounded-md my-auto p-4'
                     >
                         <div className='popup.header'>
