@@ -27,7 +27,7 @@
   }
 
   .contentcontainer {
-    @apply mt-16 bg-gray-700 h-screen w-screen shadow-lg fixed ml-80 -z-20 p-8;
+    @apply mt-16 bg-gray-700 h-full w-screen shadow-lg fixed ml-80 -z-20 p-8 overflow-scroll;
   }
 
   .navwrapper {

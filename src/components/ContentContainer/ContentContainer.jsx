@@ -8,7 +8,6 @@ const ContentContainer = ( {content} ) => {
     return (
         <>
             <div className='contentcontainer text-white'>
-                <h1>{content.name}</h1>
                 <Content display={content}/>
                 <BottomBar />
             </div>

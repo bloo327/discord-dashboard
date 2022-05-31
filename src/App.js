@@ -6,7 +6,6 @@ import TopNavBar from './components/TopNavBar/TopNavBar';
 import Home from './components/Content/Home';
 
 function App() { 
-
   const [data, setData] = useState({
     name: 'Home',
     display: <Home />,
@@ -16,7 +15,7 @@ function App() {
     <div className='wrapper m-auto'>
       <div className="flex">
         <SideBar dataSet={setData}/>
-        <ChannelBar />
+        <ChannelBar name={data.name}/>
         <TopNavBar />
         <ContentContainer content={data}/>
       </div>
