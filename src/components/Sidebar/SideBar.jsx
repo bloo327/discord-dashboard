@@ -1,32 +1,41 @@
-import { useState, } from 'react';
-import { BsFillCompassFill, BsPlusLg, BsXLg } from 'react-icons/bs';
-import { FaHome, FaGithub, FaBasketballBall } from 'react-icons/fa';
+import { useState } from 'react';
+import { BsPlusLg, BsXLg } from 'react-icons/bs';
+import { FaHome, FaGithub, FaBasketballBall, FaSnowboarding } from 'react-icons/fa';
 import { Transition, Dialog } from '@headlessui/react'
+import Home from '../Content/Home';
+import Nba from '../Content/Nba';
+import Snowsports from '../Content/Snowsports';
 
-const SideBar = () => {
-    // const [newServers, setNewServers] = useState(null);
-
+const SideBar = ({ dataSet }) => {
     return (
         <div className='fixed top-0 left-0 h-screen w-20 m-0
                         flex flex-col bg-primary text-white shadow-lg'>
-            <SideBarIcon icon={ <FaHome name='Home' size='25' /> } />
+            <SideBarIcon dataSet={dataSet} icon={ <FaHome name='Home' size='25' content={<Home/>}/> } />
             <Divider />
-            <SideBarIcon icon={ <FaBasketballBall name='NBA' size='25' /> } />
-            <SideBarIcon icon={ <FaGithub name='Github' size='25' /> } />
+            <SideBarIcon dataSet={dataSet} icon={ <FaBasketballBall name='NBA' size='25' content={<Nba/>}/>  }/>
+            <SideBarIcon dataSet={dataSet} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<Snowsports/>}/> } />
             <Divider />
-            <SideBarIcon icon={ <BsPlusLg name='Add a server' size='20' /> } />
-            <SideBarIcon icon={ <BsFillCompassFill name='Explore Public Servers' size='20' /> } />
+            <SideBarIcon dataSet={dataSet} icon={ <BsPlusLg name='Add a server' size='20' /> } />
+            <SideBarIcon dataSet={dataSet} icon={ <FaGithub name='Github' size='25' /> } />
         </div>
     );
 };
 
-const SideBarIcon = ({ icon }) => {
+const SideBarIcon = ({ icon, dataSet }) => {
     const [popupDisplay, setPopupDisplay] = useState(false);
 
     const handleClick = () => {
-        alert('notadd')
+        if (icon.props.name === 'Github') {
+            window.open('https://github.com/bloo327/tailwind-dashboard')
+        }
+
+        dataSet({
+            name: icon.props.name,
+            display: icon.props.content
+        })
     }
 
+    //Add server modal
     return (icon.props.name === 'Add a server') ? (
         <>
             <button onClick={() => setPopupDisplay(true)} className='sidebar-icon group cursor-pointer' >

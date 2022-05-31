@@ -1,18 +1,33 @@
-import { useState } from 'react';
-import { BsCircleFill } from 'react-icons/bs';
+import { BsPlusCircleFill } from 'react-icons/bs';
 import TopNavBar from '../TopNavBar/TopNavBar';
+import Content from '../Content/Content'
 
 
-const ContentContainer = () => {
+const ContentContainer = ( {content} ) => {
+    
     return (
         <>
-        <TopNavBar />
             <div className='contentcontainer text-white'>
-                <h1>I am Content Container</h1>
-                <hr className='contentbar-hr' />
+                <h1>{content.name}</h1>
+                <Content display={content}/>
+                <BottomBar />
             </div>
         </>
     )
 }
+
+const BottomBar = () => (
+    <div className='bottom-bar'>
+      <PlusIcon />
+      <input type='text' placeholder='Enter message...' className='bottom-bar-input' />
+    </div>
+  );
+  
+const PlusIcon = () => (
+    <BsPlusCircleFill
+        size='22'
+        className='text-green-500 dark:shadow-lg mx-2 dark:text-primary'
+    />
+    );  
 
 export default ContentContainer

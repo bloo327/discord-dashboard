@@ -21,6 +21,7 @@ const ChannelBar = () => {
 
 const Dropdown = ({ header, options }) => {
     const [expanded, setExpanded] = useState(true)
+    
     return (
         <div className='dropdown mb-5'>
             <div className='drop-header' onClick={() => setExpanded(!expanded)}>
@@ -32,7 +33,7 @@ const Dropdown = ({ header, options }) => {
                     <h5 className={expanded ? 'drop-header-selected' : 'drop-header-text'}>
                         {header}
                     </h5>
-                    {(expanded === false) ? <FaPlus size='12' className='text-accent my-auto ml-auto' /> : <FaPlus size='12' className='opacity-0 text-accent my-auto ml-auto' />} 
+                    {(expanded === false) ? <FaPlus size='12' className='text-accent my-auto ml-auto transition-all opacity-100' /> : <FaPlus size='12' className='transition-all opacity-0 text-accent my-auto ml-auto' />} 
             </div>
             {expanded &&
             options &&
@@ -43,7 +44,7 @@ const Dropdown = ({ header, options }) => {
 
 const TopicSelection = ({ selection }) => (
     <div className='drop-selection'>
-      <BsHash size='24' className='text-gray-400' />
+      <BsHash size='24' className='text-gray-500' />
       <h5 className='drop-selection-text my-1'>{selection}</h5>
     </div>
   );
