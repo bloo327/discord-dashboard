@@ -70,6 +70,10 @@
     @apply shadow-lg h-16
   }
 
+  .theme-toggle {
+    @apply mr-4 cursor-pointer text-gray-400 animate-pulse hover:animate-none hover:text-white transition-all ease-linear;
+  }
+
   .drop-header {
     @apply flex flex-row items-center justify-evenly
     mx-0 text-gray-500 
@@ -186,6 +190,7 @@
   .iframeVideo iframe{
     @apply w-full h-full absolute
   }
+
 }
 
 /* if screen becomes larger than 640px */

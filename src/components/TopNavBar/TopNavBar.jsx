@@ -3,7 +3,7 @@ import { FaSearch, FaHashtag, FaRegBell, FaUserCircle, FaMoon, FaSun } from 'rea
 import useDarkMode from '../../Hooks/useDarkMode'
 
 const TopNavBar = () => {
-    const [dimensions, setDimensions] = useState({ height: 0, width: 0})
+    const [dimensions, setDimensions] = useState({ height: 0, width: 640})
 
     useEffect(() => {
         const handleResize = () => {
@@ -24,11 +24,11 @@ const TopNavBar = () => {
             <div className='top-nav text-white'>
                 <div className='navleft'>
                     <FaHashtag className='text-lg text-gray-400'/>
-                    <h1 className='font-bold text-lg pl-1 servername'>Welcome</h1>
+                    <h1 className='font-bold text-lg servername pl-0.5'>Welcome</h1>
                 </div>
                 <div className='navright'>
                     <ThemeToggle />
-                    {dimensions.width >= 580 ? <Search /> : 
+                    {dimensions.width >= 640 ? <Search /> : 
                         <>
                             <input className='search-input hidden' type='text' placeholder='Search...' />
                             <FaSearch size='23' className='text-gray-500 my-auto' />
@@ -45,9 +45,9 @@ const ThemeToggle = () => {
     const [darkTheme, setDarkTheme] = useDarkMode();
     const handleMode = () => setDarkTheme(!darkTheme);
     return (
-        <span onClick={handleMode}>
-            {darkTheme ? (<FaSun size='24' className='top-navigation-icon' />) 
-            : (<FaMoon size='24' className='top-navigation-icon' />)}
+        <span onClick={handleMode} className='theme-toggle'>
+            {darkTheme ? (<FaSun size='23' onClick={handleMode} className='top-navigation-icon' />) 
+            : (<FaMoon size='23' onClick={handleMode} className='top-navigation-icon' />)}
         </span>
   );
 };
@@ -58,4 +58,5 @@ const Search = () => (
       <FaSearch size='18' className='text-gray-500 my-auto' />
     </div>
   );
+
 export default TopNavBar

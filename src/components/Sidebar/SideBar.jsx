@@ -76,7 +76,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
             </Transition>
         </>
     ) : (
-        <button onClick={handleClick} className='sidebar-icon group cursor-pointer' >
+        <button onClick={handleClick} className={`${icon.props.name} sidebar-icon group cursor-pointer`} >
             { icon }
 
             <span className='sidebar-name group-hover:scale-100'>
