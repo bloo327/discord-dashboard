@@ -16,7 +16,6 @@ function App() {
       <div className="flex">
         <SideBar dataSet={setData}/>
         <ChannelBar name={data.name}/>
-        <TopNavBar />
         <ContentContainer content={data}/>
       </div>
     </div>

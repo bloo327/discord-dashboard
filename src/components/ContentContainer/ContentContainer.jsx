@@ -1,12 +1,12 @@
 import { BsPlusCircleFill } from 'react-icons/bs';
-import TopNavBar from '../TopNavBar/TopNavBar';
 import Content from '../Content/Content'
-
+import TopNavBar from '../TopNavBar/TopNavBar';
 
 const ContentContainer = ( {content} ) => {
     
     return (
         <>
+            <TopNavBar />
             <div className='contentcontainer text-white'>
                 <Content display={content}/>
                 <BottomBar />
@@ -18,7 +18,7 @@ const ContentContainer = ( {content} ) => {
 const BottomBar = () => (
     <div className='bottom-bar'>
       <PlusIcon />
-      <input type='text' placeholder='Enter message...' className='bottom-bar-input' />
+      <input type='text' placeholder='Any thoughts? Try typing them here!' className='bottom-bar-input' />
     </div>
   );
   

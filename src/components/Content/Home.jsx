@@ -5,9 +5,11 @@ const Home = () => {
                 Welcome to my Discord Dashboard!
             </h1>
             <h1 className='text-xl flex flex-col'>
-                What to work on:
-                <p> - add this section </p>
-                <p> - connect state to channelbar </p>
+                <p className="font-bold">What I'm currently working on:</p>
+                <p> - adding this section </p>
+                <p> - connecting state to channelbar </p>
+                <p> - adding add server functionality </p>
+                <p> - finishing top nav, light/dark mode </p>
             </h1>
         </div>
     )

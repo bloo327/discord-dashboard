@@ -43,7 +43,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
             <button onClick={() => setPopupDisplay(true)} className='sidebar-icon group cursor-pointer' >
                 { icon }
 
-                <span class='sidebar-name group-hover:scale-100'>
+                <span className='sidebar-name group-hover:scale-100'>
                     { icon.props.name }
                 </span>
             </button>
@@ -79,7 +79,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
         <button onClick={handleClick} className='sidebar-icon group cursor-pointer' >
             { icon }
 
-            <span class='sidebar-name group-hover:scale-100'>
+            <span className='sidebar-name group-hover:scale-100'>
                 { icon.props.name }
             </span>
         </button>

@@ -7,7 +7,7 @@ const voicechannels = ['league', 'valorant', 'squad']
 
 const ChannelBar = ({ name }) => {
     return (
-        <div className='flex flex-col channelbar text-white rounded-sm'>
+        <div className='hidden flex-col channelbar text-white rounded-sm'>
             <div className='server-wrap'>
                 <h1 className='text-2xl font-bold p-4'>{name}</h1>
             </div>
@@ -35,9 +35,11 @@ const Dropdown = ({ header, options }) => {
                     </h5>
                     {(expanded === false) ? <FaPlus size='12' className='text-accent my-auto ml-auto transition-all opacity-100' /> : <FaPlus size='12' className='transition-all opacity-0 text-accent my-auto ml-auto' />} 
             </div>
+            <ul>
             {expanded &&
             options &&
-            options.map((selection) => <TopicSelection selection={selection} />)}
+            options.map((selection) => <li key={selection}><TopicSelection selection={selection} /></li>)}
+            </ul>
         </div>
     )
 }
@@ -45,7 +47,7 @@ const Dropdown = ({ header, options }) => {
 const TopicSelection = ({ selection }) => (
     <div className='drop-selection'>
       <BsHash size='24' className='text-gray-500' />
-      <h5 className='drop-selection-text my-1'>{selection}</h5>
+      <ul className='drop-selection-text my-1'>{selection}</ul>
     </div>
   );
 

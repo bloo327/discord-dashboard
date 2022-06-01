@@ -1,14 +1,21 @@
-import { useState, useEffect } from 'react'
-
 const Content = ({ display }) => {
 
-    return (
-        <div className='border h-max w-10/12 mb-20'>
-            <h1>Current Content:
+    return display.name !== 'Home' ? (
+        <>
+            <div className='content-header'>
+                <div className='header-welcome'>
+                    Welcome to
+                    <p>{display.name}</p>
+                </div>
+                <p className='text-sm'>This is the beginning of this server.</p>
+            </div>
+            <div className='h-max w-10/12 mb-20'>
                 {display.display}
-            </h1>
+            </div>
+        </>
+    ) : <div className='h-max w-10/12 mb-20'>
+            {display.display}
         </div>
-    )
 }
 
 export default Content
