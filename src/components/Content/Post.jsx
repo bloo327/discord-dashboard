@@ -12,7 +12,7 @@ const Post = ({ name, timestamp, text }) => {
             {name}
             <small className='timestamp'>{timestamp}</small>
           </p>
-          <p className='post-text'>{text}</p>
+          <div className='post-text'>{text}</div>
         </div>
       </div>
     );

@@ -1,16 +1,26 @@
+import Post from "./Post"
+
 const Home = () => {
     return (
-        <div className='home-wrap'>
-            <h1 className='text-3xl text-gray-300 dark:text-gray-700 transition duration-300 ease-in-out'>
-                Welcome to my Discord Dashboard!
-            </h1>
-            <h1 className='text-xl flex flex-col dark:text-gray-700 transition duration-300 ease-in-out'>
-                <p className="font-bold">What I'm currently working on:</p>
-                - finishing this section <br /> 
-                - connecting state to channelbar <br />
-                - adding add server functionality <br />
-            </h1>
-        </div>
+        <Post name='Brendan' timestamp='06/02/2022' text={
+            <div className='home-wrap'>
+                <h1 className='home-header'>
+                    Welcome to my Discord Dashboard!
+                </h1>
+                <h2 className='home-body'>
+                    Features in progress: <br />
+                    - finishing this section <br /> 
+                    - connecting channelbar state <br />
+                    - adding add server functionality <br />
+                    - fix content spacing after 1060px <br />
+                    - adding reactions
+                </h2>
+                <h3>
+                    Not here from Github? <br />
+                    Visit the repo from the sidebar!
+                </h3>
+            </div>
+        }/>
     )
 }
 

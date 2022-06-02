@@ -18,7 +18,7 @@ const ContentContainer = ( {content} ) => {
 const BottomBar = () => (
     <div className='bottom-bar'>
       <PlusIcon />
-      <input type='text' placeholder='Any thoughts? Try typing them here!' className='bottom-bar-input' />
+      <input type='text' placeholder='Message #{channel-name}' className='bottom-bar-input' />
     </div>
   );
   

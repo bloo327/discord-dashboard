@@ -5,14 +5,14 @@ const SnowSports = () => {
         <Post name='Brendan' timestamp='05/30/2022' text={
         <div className='snow-wrap flex flex-col'>
             <h1 className='text-3xl'>
-                Here's some of my favorite skiing/snowboarding clips and videos!
+                Here's some of my favorite skiing/snowboarding clips and videos, share some of your own!
             </h1>
             <div className='clip-wrap'>
                 <p className='text-xl'>
                         Henrik Harlaut - Griselda Flip
                 </p>
                 <div className='iframeVideo'>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8d1Ba01ba3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8d1Ba01ba3w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
             <div className='clip-wrap'>
@@ -20,7 +20,7 @@ const SnowSports = () => {
                     Candide Thovex - Pretty Tight
                 </p>
                 <div className='iframeVideo'>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p-mZTR1glq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p-mZTR1glq4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
             <div className='clip-wrap'>
@@ -28,7 +28,7 @@ const SnowSports = () => {
                         Zeb Powell - XGames Aspen 2020 Knuckle Huck
                 </p>
                 <div className='iframeVideo'>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6QX-mRBgr_U?start=116" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6QX-mRBgr_U?start=116" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
         </div>}

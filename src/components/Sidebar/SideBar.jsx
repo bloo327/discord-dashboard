@@ -7,17 +7,17 @@ import Nba from '../Content/Nba';
 import SnowSports from '../Content/Snowsports';
 import ChatServer from '../Content/ChatServer';
 
-const SideBar = ({ dataSet }) => {
+const SideBar = ({ dataSetter }) => {
     return (
         <div className='sidebar'>
-            <SideBarIcon dataSet={dataSet} icon={ <FaHome name='Home' size='25' content={<Home/>}/> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaHome name='Home' size='25' content={<Home/>}/> } />
             <Divider />
-            <SideBarIcon dataSet={dataSet} icon={ <BsChatTextFill name='Chat Server' size='23' content={<ChatServer/>}/> } />
-            <SideBarIcon dataSet={dataSet} icon={ <FaBasketballBall name='NBA' size='25' content={<Nba/>}/>  }/>
-            <SideBarIcon dataSet={dataSet} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<SnowSports/>}/> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <BsChatTextFill name='Chat Server' size='23' content={<ChatServer/>}/> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaBasketballBall name='NBA-Tracker' size='25' content={<Nba/>}/>  }/>
+            <SideBarIcon dataSet={dataSetter} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<SnowSports/>}/> } />
             <Divider />
-            <SideBarIcon dataSet={dataSet} icon={ <BsPlusLg name='Add a server' size='20' /> } />
-            <SideBarIcon dataSet={dataSet} icon={ <FaGithub name='Check out the repo!' size='25' /> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <BsPlusLg name='Add a server' size='20' /> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaGithub name='Check out the repo!' size='25' /> } />
         </div>
     );
 };
@@ -76,6 +76,9 @@ const SideBarIcon = ({ icon, dataSet }) => {
         </>
     ) : (
         <button onClick={handleClick} className={`${icon.props.name} sidebar-icon group cursor-pointer`} >
+            <span className='sidebar-select group-hover:scale-100'>
+            </span>
+            
             { icon }
 
             <span className='sidebar-name group-hover:scale-100'>
