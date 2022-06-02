@@ -7,9 +7,9 @@ const voicechannels = ['league', 'valorant', 'squad']
 
 const ChannelBar = ({ name }) => {
     return (
-        <div className='hidden flex-col channelbar text-white rounded-sm'>
+        <div className='channelbar'>
             <div className='server-wrap'>
-                <h1 className='text-2xl font-bold p-4'>{name}</h1>
+                <h1 className='server-name'>{name}</h1>
             </div>
             <div className='channel-list p-5'>
                 <Dropdown header='TEXT CHANNELS' options={textchannels} />

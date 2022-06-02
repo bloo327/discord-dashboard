@@ -55,14 +55,14 @@ const ChatServer = () => {
             />
             <Post
             name='Nadnerb'
-            timestamp='2 days ago'
+            timestamp='Just now'
             text={`Mauris vel est ac odio hendrerit pharetra eget sit amet purus. 
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
             per inceptos himenaeos. `}
             />
             <Post
             name='Bloo'
-            timestamp='2 days ago'
+            timestamp='Just now'
             text={`Praesent ullamcorper condimentum nunc. This is gibberish Phasellus tincidunt erat nec ante egestas 
             mollis at semper lectus. Cras convallis ante vel velit dignissim tincidunt. 
             In nec dolor consectetur velit fermentum blandit. `}

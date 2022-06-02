@@ -9,8 +9,7 @@ import ChatServer from '../Content/ChatServer';
 
 const SideBar = ({ dataSet }) => {
     return (
-        <div className='fixed top-0 left-0 h-screen w-20 m-0
-                        flex flex-col bg-primary text-white shadow-lg'>
+        <div className='sidebar'>
             <SideBarIcon dataSet={dataSet} icon={ <FaHome name='Home' size='25' content={<Home/>}/> } />
             <Divider />
             <SideBarIcon dataSet={dataSet} icon={ <BsChatTextFill name='Chat Server' size='23' content={<ChatServer/>}/> } />

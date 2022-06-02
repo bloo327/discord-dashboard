@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FaSearch, FaHashtag, FaRegBell, FaUserCircle, FaMoon, FaSun } from 'react-icons/fa'
+import { FaSearch, FaHashtag, FaBell, FaUserCircle, FaMoon, FaSun } from 'react-icons/fa'
 import useDarkMode from '../../Hooks/useDarkMode'
 
 const TopNavBar = () => {
@@ -23,18 +23,18 @@ const TopNavBar = () => {
     return (
             <div className='top-nav text-white'>
                 <div className='navleft'>
-                    <FaHashtag className='text-lg text-gray-400'/>
-                    <h1 className='font-bold text-lg servername pl-0.5'>Welcome</h1>
+                    <FaHashtag className='hashtag'/>
+                    <h1 className='channel-name'>Welcome</h1>
                 </div>
                 <div className='navright'>
                     <ThemeToggle />
                     {dimensions.width >= 640 ? <Search /> : 
                         <>
                             <input className='search-input hidden' type='text' placeholder='Search...' />
-                            <FaSearch size='23' className='text-gray-500 my-auto' />
+                            <FaSearch size='23' className='search-icon' />
                         </>
                     }
-                    <FaRegBell size='24' className='top-nav-icon -mr-1' />
+                    <FaBell size='24' className='top-nav-icon -mr-1' />
                     <FaUserCircle size='24' className='top-nav-icon' />
                 </div>
             </div>
@@ -46,8 +46,8 @@ const ThemeToggle = () => {
     const handleMode = () => setDarkTheme(!darkTheme);
     return (
         <span onClick={handleMode} className='theme-toggle'>
-            {darkTheme ? (<FaSun size='23' onClick={handleMode} className='top-navigation-icon' />) 
-            : (<FaMoon size='23' onClick={handleMode} className='top-navigation-icon' />)}
+            {darkTheme ? (<FaMoon size='23' onClick={handleMode} className='top-navigation-icon' />) 
+            : (<FaSun size='25' onClick={handleMode} className='top-navigation-icon' />)}
         </span>
   );
 };
@@ -55,7 +55,7 @@ const ThemeToggle = () => {
 const Search = () => (
     <div className='search'>
       <input className='search-input' type='text' placeholder='Search...' />
-      <FaSearch size='18' className='text-gray-500 my-auto' />
+      <FaSearch size='18' className='search-icon' />
     </div>
   );
 
