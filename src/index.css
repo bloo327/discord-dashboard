@@ -280,6 +280,10 @@
     margin-left: 20rem;
   }
 
+  .content-wrap {
+    width: 80%;
+  }
+
   .bottom-bar {
     margin-left: 0;
     left: 24rem;

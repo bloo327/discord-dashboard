@@ -12,7 +12,6 @@ const Home = () => {
                     - finishing this section <br /> 
                     - connecting channelbar state <br />
                     - adding add server functionality <br />
-                    - fix content spacing after 1060px <br />
                     - adding reactions
                 </h2>
                 <h3>

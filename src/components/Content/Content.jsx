@@ -9,11 +9,11 @@ const Content = ({ display }) => {
                 </div>
                 <p className='text-sm'>This is the beginning of this server.</p>
             </div>
-            <div className='h-max w-10/12 mb-20'>
+            <div className='content-wrap h-max w-10/12 mb-20'>
                 {display.display}
             </div>
         </>
-    ) : <div className='h-max w-10/12 mb-20'>
+    ) : <div className='content-wrap h-max w-10/12 mb-20'>
             {display.display}
         </div>
 }
