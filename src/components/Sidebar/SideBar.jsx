@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BsPlusLg, BsXLg, BsChatTextFill } from 'react-icons/bs';
 import { FaHome, FaGithub, FaBasketballBall, FaSnowboarding } from 'react-icons/fa';
+import {IoCreate, IoGameController, IoSchool, IoFitness } from 'react-icons/io5'
 import { Transition, Dialog } from '@headlessui/react'
 import Home from '../Content/Home';
 import Nba from '../Content/Nba';
@@ -34,7 +35,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
             name: icon.props.name,
             display: icon.props.content
         })
-    }
+    };
 
     //Add server modal
     return (icon.props.name === 'Add a server') ? (
@@ -65,10 +66,30 @@ const SideBarIcon = ({ icon, dataSet }) => {
                     leaveTo="-translate-y-3 opacity-0"
                     className='relative h-3/5 w-1/4 bg-white shadow-lg rounded-md my-auto p-4'
                     >
-                        <div className='popup.header'>
+                        <div className='popup-header'>
                             <button className='absolute top-4 right-4 text-black' onClick={() => setPopupDisplay(false)}><BsXLg size='20' /></button>
                             <Dialog.Title className='p-4 font-extrabold text-3xl text-center'>Create a Server!</Dialog.Title>
                             <Dialog.Description className='font-normal text-center text-lg'>What type of server would you like?</Dialog.Description>
+                        </div>
+                        <div className='popup-body'>
+                            <div className='popup-option mb-8'>
+                                <IoCreate size='30' className='popup-icon'/>
+                                <h1 className='option-name'>Create my own</h1>
+                            </div>
+
+                            <h1 className='pl-2 text-sm font-bold'>START FROM A TEMPLATE</h1>
+                            <div className='popup-option'>
+                                <IoGameController size='30' className='popup-icon'/>
+                                <h1 className='option-name'>Gaming</h1>
+                            </div>
+                            <div className='popup-option'>
+                                <IoSchool size='30' className='popup-icon'/>
+                                <h1 className='option-name'>School/Study group</h1>
+                            </div>
+                            <div className='popup-option'>
+                                <IoFitness size='30' className='popup-icon'/>
+                                <h1 className='option-name'>Fitness</h1>
+                            </div>
                         </div>
                     </Transition.Child>
                 </Dialog>

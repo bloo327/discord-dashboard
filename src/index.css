@@ -35,6 +35,18 @@
     @apply bg-gray-600 border-gray-700 mx-5 w-10;
   }
 
+  .popup-body {
+    @apply text-2xl mt-10
+  }
+
+  .popup-option {
+    @apply flex p-4 mx-2 my-4 border-2 rounded 
+  }
+
+  .option-name {
+    @apply pl-2 text-xl font-bold
+  }
+
   .channel-name {
     @apply font-bold text-lg pl-0.5 dark:text-gray-900 transition duration-300 ease-in-out select-none
   }

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-
-
-const AddServer = (props) => {
-
+const AddServer = () => {
+    return (
+        <div></div>
+    )
 }
 
 export default AddServer
