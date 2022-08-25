@@ -31,7 +31,8 @@
   .sidebar-name {
     @apply absolute w-auto p-2 m-2 min-w-max left-16 z-10
             rounded-md shadow-md text-white bg-gray-900 text-xs
-            font-bold transition-all duration-100 scale-0 origin-left;
+            font-bold transition-all duration-100 scale-0 origin-left
+            hidden;
   }
 
   .sidebar-select {
@@ -261,6 +262,11 @@
   .navleft {
     display: flex;
   }
+
+  .sidebar-name {
+    display: block;
+  }
+
   .navright {
     margin-left: -15rem
   }

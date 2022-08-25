@@ -9,9 +9,8 @@ const Home = () => {
                 </h1>
                 <h2 className='home-body'>
                     Potential new features: <br />
-                    - adding add server functionality <br />
-                    - adding reactions <br />
-                    - posts???
+                    - add server functionality <br />
+                    - user profiles/posts/reactions <br />
                 </h2>
                 <h3>
                     Not here from Github? <br />
