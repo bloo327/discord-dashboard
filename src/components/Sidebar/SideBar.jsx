@@ -7,18 +7,20 @@ import Home from '../Content/Home';
 import Nba from '../Content/Nba';
 import SnowSports from '../Content/Snowsports';
 import ChatServer from '../Content/ChatServer';
+import Github from '../Content/Github';
 
 const SideBar = ({ dataSetter }) => {
+
     return (
         <div className='sidebar'>
             <SideBarIcon dataSet={dataSetter} icon={ <FaHome name='Home' size='25' content={<Home/>}/> } />
             <Divider />
-            <SideBarIcon dataSet={dataSetter} icon={ <BsChatTextFill name='Chat Server' size='23' content={<ChatServer/>}/> } />
-            <SideBarIcon dataSet={dataSetter} icon={ <FaBasketballBall name='NBA-Tracker' size='25' content={<Nba/>}/>  }/>
-            <SideBarIcon dataSet={dataSetter} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<SnowSports/>}/> } />
+            <SideBarIcon dataSet={dataSetter}  icon={ <BsChatTextFill name='Chat Server' size='23' content={<ChatServer/>} /> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaBasketballBall name='NBA-Tracker' size='25' content={<Nba/>}/>  } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<SnowSports/>} /> } />
             <Divider />
             <SideBarIcon dataSet={dataSetter} icon={ <BsPlusLg name='Add a server' size='20' /> } />
-            <SideBarIcon dataSet={dataSetter} icon={ <FaGithub name='Check out the repo!' size='25' /> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaGithub name='Github Repo!' size='25' content={<Github/>} /> } />
         </div>
     );
 };
@@ -26,10 +28,12 @@ const SideBar = ({ dataSetter }) => {
 const SideBarIcon = ({ icon, dataSet }) => {
     const [popupDisplay, setPopupDisplay] = useState(false);
 
-    const handleClick = () => {
-        if (icon.props.name === 'Check out the repo!') {
-            window.open('https://github.com/bloo327/tailwind-dashboard')
-        } else
+    const handleClick = (e) => {
+        let curr = document.getElementsByClassName('sbactive');
+        if (curr.length > 0) {
+            curr[0].className = curr[0].className.replace('sbactive', '');
+        }
+        e.currentTarget.classList.add('sbactive');
 
         dataSet({
             name: icon.props.name,
@@ -96,7 +100,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
             </Transition>
         </>
     ) : (
-        <button onClick={handleClick} className={`${icon.props.name} sidebar-icon group cursor-pointer`} >
+        <button onClick={handleClick} className={icon.props.name === 'Home' ? `${icon.props.name} sbactive sidebar-icon group cursor-pointer` : `${icon.props.name} sidebar-icon group cursor-pointer`} >
             <span className='sidebar-select group-hover:scale-100'>
             </span>
             

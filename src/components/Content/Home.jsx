@@ -8,11 +8,10 @@ const Home = () => {
                     Welcome to my Discord Dashboard!
                 </h1>
                 <h2 className='home-body'>
-                    Features in progress: <br />
-                    - finishing this section <br /> 
-                    - connecting channelbar state <br />
+                    Potential new features: <br />
                     - adding add server functionality <br />
-                    - adding reactions
+                    - adding reactions <br />
+                    - posts???
                 </h2>
                 <h3>
                     Not here from Github? <br />

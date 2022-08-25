@@ -5,7 +5,7 @@ const SnowSports = () => {
         <Post name='Brendan' timestamp='05/30/2022' text={
         <div className='snow-wrap flex flex-col'>
             <h1 className='text-3xl'>
-                Here's some of my favorite skiing/snowboarding clips and videos, share some of your own!
+                Here's some of my favorite skiing/snowboarding clips and videos!
             </h1>
             <div className='clip-wrap'>
                 <p className='text-xl'>

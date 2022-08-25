@@ -14,9 +14,18 @@
     @apply relative flex items-center justify-center
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
             bg-gray-700 text-green-500 hover:bg-green-600 
-            hover:text-white rounded-3xl hover:rounded-xl focus:rounded-2xl focus:bg-green-500 focus:text-white
+            hover:text-white rounded-3xl hover:rounded-xl 
             transition-all duration-150 ease-linear
             dark:bg-gray-300 dark:text-secondary dark:hover:bg-secondary dark:hover:text-white; 
+  }
+
+  .sbactive {
+    @apply relative flex items-center justify-center
+            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+            bg-green-600 text-white hover:bg-green-600 
+            hover:text-white rounded-2xl hover:rounded-xl 
+            transition-all duration-150 ease-linear
+            dark:bg-secondary dark:text-white dark:hover:bg-secondary dark:hover:text-white;
   }
 
   .sidebar-name {
@@ -41,6 +50,7 @@
 
   .popup-option {
     @apply flex p-4 mx-2 my-4 border-2 rounded 
+          hover:cursor-pointer hover:bg-slate-500 transition-all duration-300
   }
 
   .option-name {
@@ -270,6 +280,10 @@
 @media (min-width: 1024px) {
   .content-header {
     margin-left: -10rem;
+  }
+
+  .post-content {
+    margin-right: 6rem;
   }
 
   .top-nav {

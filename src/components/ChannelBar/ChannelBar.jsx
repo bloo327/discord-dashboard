@@ -3,7 +3,7 @@ import { BsHash } from 'react-icons/bs';
 import { FaChevronDown, FaPlus } from 'react-icons/fa';
 
 const textchannels = ['welcome', 'general']
-const voicechannels = ['league', 'valorant', 'squad']
+const voicechannels = ['league', 'valorant', 'csgo', 'chill']
 
 const ChannelBar = ({ name }) => {
     return (

@@ -1,13 +1,13 @@
 import SideBar  from './components/Sidebar/SideBar';
 import ChannelBar from './components/ChannelBar/ChannelBar';
 import ContentContainer from './components/ContentContainer/ContentContainer';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Home from './components/Content/Home';
 
 function App() { 
   const [data, setData] = useState({
     name: 'Home',
-    display: <Home />,
+    display: <Home />
   })
 
   return (
