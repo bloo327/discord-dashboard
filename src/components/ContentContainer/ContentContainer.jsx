@@ -1,5 +1,5 @@
 import { BsPlusCircleFill } from 'react-icons/bs';
-import Content from '../Content/Content'
+import Content from '../Content/Content';
 import TopNavBar from '../TopNavBar/TopNavBar';
 
 const ContentContainer = ({ content }) => {
@@ -29,4 +29,4 @@ const PlusIcon = () => (
     />
     );  
 
-export default ContentContainer
+export default ContentContainer;

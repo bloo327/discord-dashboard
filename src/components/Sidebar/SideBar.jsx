@@ -45,6 +45,7 @@ const SideBarIcon = ({ icon, dataSet }) => {
     return (icon.props.name === 'Add a server') ? (
         <>
             <button onClick={() => setPopupDisplay(true)} className='sidebar-icon group cursor-pointer' >
+            <span className='sidebar-select group-hover:scale-100'></span>
                 { icon }
 
                 <span className='sidebar-name group-hover:scale-100'>
