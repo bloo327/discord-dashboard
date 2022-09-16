@@ -22,6 +22,7 @@ Light Mode
 NBA Tracker using the [balldontlie API](https://www.balldontlie.io/#introduction)
 <br>
     <img width='460' height='300' src='https://github.com/bloo327/discord-dashboard/blob/main/NBATracker.gif?raw=true'>
+
 ---
 - Personal Note: <br>
 This project was a really fun way for me to introduce myself to the basics of [React](https://reactjs.org/) and [Tailwind](https://tailwindcss.com/).
