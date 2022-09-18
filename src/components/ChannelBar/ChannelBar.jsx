@@ -26,14 +26,14 @@ const Dropdown = ({ header, options }) => {
         <div className='dropdown mb-5'>
             <div className='drop-header' onClick={() => setExpanded(!expanded)}>
                 <FaChevronDown className={
-                    expanded ? 'transition-all ease-out text-accent text-opacity-80 my-auto mr-1' 
-                    : 'transition-all ease-in -rotate-90 text-accent text-opacity-80 my-auto mr-1' 
+                    expanded ? 'transition-all ease-out text-opacity-80 my-auto mr-1' 
+                    : 'transition-all ease-in -rotate-90 text-opacity-80 my-auto mr-1' 
                     } 
                 />
                     <h5 className={expanded ? 'drop-header-selected' : 'drop-header-text'}>
                         {header}
                     </h5>
-                    {(expanded === false) ? <FaPlus size='12' className='text-accent my-auto ml-auto transition-all opacity-100' /> : <FaPlus size='12' className='transition-all opacity-0 text-accent my-auto ml-auto' />} 
+                    {(expanded === false) ? <FaPlus size='12' className='my-auto ml-auto transition-all opacity-100' /> : <FaPlus size='12' className='transition-all opacity-0 my-auto ml-auto' />} 
             </div>
             <ul>
             {expanded &&
