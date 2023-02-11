@@ -2,11 +2,11 @@ import { BsPlusCircleFill } from 'react-icons/bs';
 import Content from '../Content/Content';
 import TopNavBar from '../TopNavBar/TopNavBar';
 
-const ContentContainer = ({ content }) => {
+const ContentContainer = ({ alertSetter, content }) => {
 
     return (
         <>
-            <TopNavBar />
+            <TopNavBar setContent={alertSetter}/>
             <div className='contentcontainer text-white'>
                 <Content display={content}/>
                 <BottomBar cname={content} />

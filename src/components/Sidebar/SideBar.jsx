@@ -20,7 +20,7 @@ const SideBar = ({ dataSetter }) => {
             <SideBarIcon dataSet={dataSetter} icon={ <FaSnowboarding name='Snow Sports' size='20' content={<SnowSports/>} /> } />
             <Divider />
             <SideBarIcon dataSet={dataSetter} icon={ <BsPlusLg name='Add a server' size='20' /> } />
-            <SideBarIcon dataSet={dataSetter} icon={ <FaGithub name='Github Repo!' size='25' content={<Github/>} /> } />
+            <SideBarIcon dataSet={dataSetter} icon={ <FaGithub name='Github Repo' size='25' content={<Github/>} /> } />
         </div>
     );
 };
@@ -117,4 +117,4 @@ const SideBarIcon = ({ icon, dataSet }) => {
 const Divider = () => <hr className='sidebar-hr' />;
 
 
-export default SideBar;
+export { SideBar as default, SideBarIcon };

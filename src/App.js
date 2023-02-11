@@ -15,7 +15,7 @@ function App() {
       <div className="flex">
         <SideBar dataSetter={setData}/>
         <ChannelBar name={data.name}/>
-        <ContentContainer content={data}/>
+        <ContentContainer alertSetter={setData} content={data}/>
       </div>
     </div>
   );

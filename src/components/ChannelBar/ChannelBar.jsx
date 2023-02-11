@@ -6,6 +6,7 @@ const textchannels = ['welcome', 'general']
 const voicechannels = ['league', 'valorant', 'csgo', 'chill']
 
 const ChannelBar = ({ name }) => {
+
     return (
         <div className='channelbar'>
             <div className='server-wrap'>
@@ -30,7 +31,7 @@ const Dropdown = ({ header, options }) => {
                     : 'transition-all ease-in -rotate-90 text-opacity-80 my-auto mr-1' 
                     } 
                 />
-                    <h5 className={expanded ? 'drop-header-selected' : 'drop-header-text'}>
+                    <h5 className={expanded ? 'drop-header-selected' : 'drop-header-text cursor-pointer'}>
                         {header}
                     </h5>
                     {(expanded === false) ? <FaPlus size='12' className='my-auto ml-auto transition-all opacity-100' /> : <FaPlus size='12' className='transition-all opacity-0 my-auto ml-auto' />} 
