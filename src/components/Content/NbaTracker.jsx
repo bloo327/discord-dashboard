@@ -1,7 +1,7 @@
 import { useState, } from 'react';
 import axios from "axios";
 
-const seasons = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990, 1989, 1988, 1987, 1986, 1985, 1984, 1983, 1982, 1981, 1980, 1979]
+const seasons = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990, 1989, 1988, 1987, 1986, 1985, 1984, 1983, 1982, 1981, 1980, 1979]
 
 const NbaTracker = () => {
     const [player, setPlayer] = useState({
@@ -17,12 +17,16 @@ const NbaTracker = () => {
     })
 
     const [season, setSeason] = useState({
-        season: 2022
+        season: 2023
     })
 
     const getPlayerId = () => {
-        axios.get(`https://www.balldontlie.io/api/v1/players?search=${player.playerName}`)
+        console.log(player.playerName)
+        axios.get(`https://api.balldontlie.io/v1/players?search=${player.playerName}`, 
+            { headers: { "Authorization" : "2fff6d14-866c-4345-b4e6-a22ee94599f5" } }
+        )
         .then(async resp => {
+            console.log(resp.data.data)
             if (resp.data.data[0] === undefined) {
                 alert(`This player doesn't exist or hasn't played in the selected season`)
             } else if (resp.data.data.length > 1) {
@@ -40,7 +44,9 @@ const NbaTracker = () => {
     }
 
     const getPlayerAverages = (playerId) => {
-        axios.get(`https://www.balldontlie.io/api/v1/season_averages?season=${season.season}&player_ids[]=${playerId}`)
+        axios.get(`https://api.balldontlie.io/v1/season_averages?season=${season.season}&player_ids[]=${playerId}`,
+            { headers: { "Authorization" : "2fff6d14-866c-4345-b4e6-a22ee94599f5" } }
+        )
         .then(async resp => {
             if (resp.data.data.length > 0) {
                 setStats({
@@ -61,14 +67,14 @@ const NbaTracker = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setPlayer({
-            playerName: ''
+            playerName: '',
         });
         getPlayerId();
     }
 
     const handleChange = (e) => {
         setPlayer({
-            playerName: e.target.value
+            playerName: e.target.value,
         });
     }
 
@@ -103,6 +109,7 @@ const NbaTracker = () => {
                     <select className='rounded-md m-4 p-2' value={season.season} onChange={handleSeasonChange}>
                         {seasons.map(i => <option key={i}>{i}</option>)}
                     </select>
+                    (Only 2023 for now!)
                 </label>
             </div>
             <form onSubmit={handleSubmit}>  
@@ -110,6 +117,7 @@ const NbaTracker = () => {
             <input className='text-black p-2 rounded-md bg-stone-200' type='submit' value='Submit' />
             </form>
             {stats.playerStats ? <Results /> : ''}
+            <h1 className='text-2xl text-red-800 font-medium'> CURRENTLY UNDER MAINTENANCE, UNIQUE FIRST NAMES STILL WORK (E.G. LEBRON) </h1>
         </div>
     )
 }

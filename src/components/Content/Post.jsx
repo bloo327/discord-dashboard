@@ -5,7 +5,7 @@ const Post = ({ name, timestamp, text }) => {
     return (
       <div className={'post'}>
         <div className='avatar-wrapper'>
-          <img style={{backgroundColor: colors[colorseed]}} src={`https://avatars.dicebear.com/api/pixel-art/${seed}.svg`} alt='' className='avatar' />
+          <img style={{backgroundColor: colors[colorseed]}} src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${seed}`} alt='' className='avatar' />
         </div>
         <div className='post-content'>
           <p className='post-owner'>
